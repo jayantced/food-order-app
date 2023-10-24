@@ -1,49 +1,52 @@
-import Meal from "./Meals";
-import classes from './Meals.module.css';
+import Card from '../UI/Card';
+import classes from './AvailableMeals.module.css';
+import MealItem from './MealItem/MealItem';
 
 const initial_items = [
   {
-    id: 1,
-    title: "Sushi",
+    id: '1',
+    name: "Sushi",
     description: "Finest fish and vegies",
-    amount: 22.99,
+    price: 22.99,
   },
   {
-    id: 2,
-    title: "Schnitzel",
+    id: '2',
+    name: "Schnitzel",
     description: "Finest fish and vegies",
-    amount: 16.50,
+    price: 16.50,
   },
   {
-    id: 3,
-    title: "Barbecue Burger",
+    id: '3',
+    name: "Barbecue Burger",
     description: "Finest fish and vegies",
-    amount: 12.99,
+    price: 12.99,
   },
   {
-    id: 4,
-    title: "Green Bowl",
+    id: '4',
+    name: "Green Bowl",
     description: "Finest fish and vegies",
-    amount: 18.99,
+    price: 18.99,
   },
 ];
 
-const Meals = () => {
+const AvailableMeals = () => {
   const available_items = initial_items.map((meal) => (
-    <Meal
+    <MealItem
       key={meal.id}
       id={meal.id}
-      title={meal.title}
+      name={meal.name}
       description={meal.description}
-      amount={meal.amount}
+      price={meal.price}
     />
   ));
-    
+  // console.log([available_items]);
     return (
-        <section className={classes.meals}>
+      <section className={classes.meals}>
+        <Card>
           <ul>{available_items}</ul>
-        </section>
-    )
+        </Card>
+      </section>
+    );
 }
 
-export default Meals;
+export default AvailableMeals;

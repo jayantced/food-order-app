@@ -1,13 +1,13 @@
-import './MealForm.module.css';
-import Input from '../UI/Input';
 import { useState } from 'react';
+import classes from './MealForm.module.css';
+import Input from '../../UI/Input';
 
 const MealForm = (props) => {
 
     const [enteredValue, setEnteredValue] =  useState();
     // console.log(enteredValue);
     const amountChangeHandler = (event) => {
-        console.log(event);
+        // console.log(event);
         setEnteredValue(event.target.value);
     }
 
@@ -16,7 +16,7 @@ const MealForm = (props) => {
         return;
     }
     return (
-        <form onSubmit={submitHandler}>
+        <form className={classes.form}>
             <Input label="Amount" value={enteredValue} onChange={amountChangeHandler} input={{
                 id: 'amount_' + props.id,
                 type: 'number',
