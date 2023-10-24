@@ -1,0 +1,25 @@
+.meal-title {
+    margin: 0;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.meal-description {
+    font-style: italic;
+    margin: 5px 0;
+}
+
+.meal-amt {
+    font-size: 18px;
+    font-weight: 600;
+    color: brown;
+}
+
+li.meal-list-item {
+    border-bottom: 1px solid #000;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
